@@ -9,7 +9,7 @@ const socialLinks = [
     name: "Telegram",
     icon: Send,
     description: "Чат и консультации",
-    link: "https://t.me/petukhovaas",
+    link: "https://t.me/rannyaptahka",
     color: "bg-[#0088cc]",
     hoverColor: "hover:bg-[#0077b5]",
   },
