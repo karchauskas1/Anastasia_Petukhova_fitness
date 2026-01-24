@@ -6,6 +6,7 @@ import Button from "../components/Button";
 import SectionTitle from "../components/SectionTitle";
 
 const TELEGRAM_LINK = "https://t.me/petukhovaas";
+const STUDIO_LINK = "https://ghettoprincess.art";
 
 interface ScheduleItem {
   time: string;
@@ -158,7 +159,7 @@ export default function Schedule() {
               <span className="text-sm">(адрес будет добавлен позже)</span>
             </p>
 
-            <a href={TELEGRAM_LINK} target="_blank" rel="noopener noreferrer">
+            <a href={STUDIO_LINK} target="_blank" rel="noopener noreferrer">
               <Button variant="outline">Записаться на групповую</Button>
             </a>
           </Card>
