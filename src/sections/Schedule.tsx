@@ -5,7 +5,7 @@ import Card from "../components/Card";
 import Button from "../components/Button";
 import SectionTitle from "../components/SectionTitle";
 
-const TELEGRAM_LINK = "#"; // TODO: Заменить на реальную ссылку
+const TELEGRAM_LINK = "https://t.me/petukhovaas";
 
 interface ScheduleItem {
   time: string;

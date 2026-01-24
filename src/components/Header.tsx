@@ -11,7 +11,7 @@ const navLinks = [
   { href: "#reviews", label: "Отзывы" },
 ];
 
-const TELEGRAM_LINK = "#"; // TODO: Заменить на реальную ссылку
+const TELEGRAM_LINK = "https://t.me/petukhovaas";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);

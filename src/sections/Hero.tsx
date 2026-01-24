@@ -3,7 +3,7 @@ import InteractiveHoverButton from "../components/InteractiveHoverButton";
 import TextGradientScroll from "../components/TextGradientScroll";
 import trainerPhoto from "../assets/trainer.jpeg";
 
-const TELEGRAM_LINK = "#"; // TODO: Заменить на реальную ссылку
+const TELEGRAM_LINK = "https://t.me/petukhovaas";
 
 const fadeInUpVariants = {
   initial: { opacity: 0, y: 30 },

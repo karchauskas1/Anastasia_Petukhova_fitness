@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Send } from "lucide-react";
 
-const TELEGRAM_LINK = "#"; // TODO: Заменить на реальную ссылку
+const TELEGRAM_LINK = "https://t.me/petukhovaas";
 
 export default function FloatingButton() {
   const [isVisible, setIsVisible] = useState(false);
