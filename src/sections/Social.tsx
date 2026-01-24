@@ -4,13 +4,12 @@ import { Send, Youtube, Instagram } from "lucide-react";
 import Card from "../components/Card";
 import SectionTitle from "../components/SectionTitle";
 
-// TODO: Заменить на реальные ссылки
 const socialLinks = [
   {
     name: "Telegram",
     icon: Send,
     description: "Чат и консультации",
-    link: "#",
+    link: "https://t.me/petukhovaas",
     color: "bg-[#0088cc]",
     hoverColor: "hover:bg-[#0077b5]",
   },
@@ -18,7 +17,7 @@ const socialLinks = [
     name: "YouTube",
     icon: Youtube,
     description: "Бесплатные тренировки",
-    link: "#",
+    link: "https://youtube.com/@petukhovaanastasia2846?si=pZDZ8xgaOHyz3Pof",
     color: "bg-[#FF0000]",
     hoverColor: "hover:bg-[#cc0000]",
   },
@@ -26,7 +25,7 @@ const socialLinks = [
     name: "Instagram*",
     icon: Instagram,
     description: "Закулисье и мотивация",
-    link: "#",
+    link: "https://www.instagram.com/petukhova_anastasii?igsh=emF0djJlcDk5czI4",
     color: "bg-gradient-to-br from-[#833AB4] via-[#E1306C] to-[#F77737]",
     hoverColor: "hover:opacity-90",
   },
