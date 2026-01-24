@@ -1,0 +1,28 @@
+/* Google Fonts - должен быть первым */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  /* Цветовая палитра */
+  --color-coral: #FF6B6B;
+  --color-coral-dark: #E85A5A;
+  --color-peach: #FFAB91;
+  --color-mint: #88D8B0;
+  --color-dark: #1A1A2E;
+  --color-gray-text: #6B7280;
+  --color-light-bg: #F8F9FA;
+
+  /* Шрифты */
+  --font-sans: 'Inter', system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-dark);
+  background-color: white;
+}
