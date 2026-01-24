@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 import Button from "../components/Button";
 
-const MARATHON_LINK = "#"; // TODO: Заменить на реальную ссылку
+const MARATHON_LINK = "https://t.me/YourBodyPet_bot";
 
 const marathonFeatures = [
   { icon: Check, text: "Персональный план тренировок" },
