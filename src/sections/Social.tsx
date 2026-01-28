@@ -24,7 +24,7 @@ const socialLinks = [
   {
     name: "Instagram*",
     icon: Instagram,
-    description: "Закулисье и мотивация",
+    description: "Личный аккаунт",
     link: "https://www.instagram.com/petukhova_anastasii?igsh=emF0djJlcDk5czI4",
     color: "bg-gradient-to-br from-[#833AB4] via-[#E1306C] to-[#F77737]",
     hoverColor: "hover:opacity-90",
