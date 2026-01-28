@@ -80,7 +80,7 @@ export default function Schedule() {
               }}
               transition={{ duration: 0.4 }}
             >
-              <Card className="h-full p-4" hover={false}>
+              <Card className="h-full p-4 flex flex-col" hover={false}>
                 {/* Day Header */}
                 <div className="text-center mb-4 pb-3 border-b border-gray-100">
                   <p className="text-coral font-bold text-lg">{day.shortDay}</p>
@@ -90,7 +90,7 @@ export default function Schedule() {
                 </div>
 
                 {/* Classes */}
-                <div className="space-y-3">
+                <div className="space-y-3 flex-1 flex flex-col justify-center">
                   {day.classes.map((cls, idx) => (
                     <div
                       key={idx}

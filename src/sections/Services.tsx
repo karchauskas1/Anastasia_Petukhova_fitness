@@ -1,4 +1,4 @@
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, AnimatePresence } from "framer-motion";
 import { useRef, useState } from "react";
 import { MapPin, Monitor, Users, Check, ChevronDown, ChevronUp } from "lucide-react";
 import Card from "../components/Card";
@@ -174,34 +174,38 @@ function ServiceCard({ service }: { service: ServiceData }) {
           {showPrices ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
         </button>
 
-        {showPrices && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="space-y-3 mb-4"
-          >
-            {service.prices.map((price, idx) => (
-              <div
-                key={idx}
-                className={`p-3 rounded-xl ${price.highlight ? "bg-coral/10 border border-coral/20" : "bg-light-bg"}`}
-              >
-                <div className="flex justify-between items-center">
-                  <span className="text-dark font-medium text-sm">{price.sessions}</span>
-                  <span className={`font-bold ${price.highlight ? "text-coral" : "text-dark"}`}>
-                    {price.totalPrice}
-                  </span>
+        <AnimatePresence>
+          {showPrices && (
+            <motion.div
+              key="prices"
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+              className="space-y-3 mb-4 overflow-hidden"
+            >
+              {service.prices.map((price, idx) => (
+                <div
+                  key={idx}
+                  className={`p-3 rounded-xl ${price.highlight ? "bg-coral/10 border border-coral/20" : "bg-light-bg"}`}
+                >
+                  <div className="flex justify-between items-center">
+                    <span className="text-dark font-medium text-sm">{price.sessions}</span>
+                    <span className={`font-bold ${price.highlight ? "text-coral" : "text-dark"}`}>
+                      {price.totalPrice}
+                    </span>
+                  </div>
+                  {price.perSession && (
+                    <p className={`text-xs mt-1 ${price.highlight ? "text-coral/70" : "text-gray-text"}`}>
+                      {price.perSession}
+                      {price.note && <span className="ml-1 font-semibold">{price.note}</span>}
+                    </p>
+                  )}
                 </div>
-                {price.perSession && (
-                  <p className={`text-xs mt-1 ${price.highlight ? "text-coral/70" : "text-gray-text"}`}>
-                    {price.perSession}
-                    {price.note && <span className="ml-1 font-semibold">{price.note}</span>}
-                  </p>
-                )}
-              </div>
-            ))}
-          </motion.div>
-        )}
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
 
         {/* CTA Button */}
         <a href={TELEGRAM_LINK} target="_blank" rel="noopener noreferrer" className="block">

@@ -6,6 +6,11 @@ import {
   Users,
   Play,
   Sparkles,
+  Bot,
+  Target,
+  Bell,
+  Brain,
+  TrendingUp,
 } from "lucide-react";
 import Button from "../components/Button";
 
@@ -17,6 +22,14 @@ const marathonFeatures = [
   { icon: Utensils, text: "Рекомендации по питанию" },
   { icon: Sparkles, text: "Экспресс-комплексы, растяжка, разминка/заминка" },
   { icon: Users, text: "Доступ к закрытому комьюнити" },
+];
+
+const botFeatures = [
+  { icon: Utensils, text: "Трекер питания с подсчётом КБЖУ" },
+  { icon: Target, text: "Трекер привычек" },
+  { icon: Bell, text: "Напоминания о тренировках" },
+  { icon: Brain, text: "Персональные рекомендации на основе AI" },
+  { icon: TrendingUp, text: "Анализ прогресса" },
 ];
 
 export default function Marathon() {
@@ -73,6 +86,41 @@ export default function Marathon() {
               ))}
             </div>
           </div>
+
+          {/* Divider */}
+          <div className="border-t border-gray-100 my-10" />
+
+          {/* Bot Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="bg-gradient-to-br from-dark to-dark/95 rounded-2xl p-6 md:p-8 text-white"
+          >
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-12 h-12 rounded-xl bg-coral/20 flex items-center justify-center">
+                <Bot className="w-6 h-6 text-coral" />
+              </div>
+              <div>
+                <p className="text-coral text-sm font-semibold">БОНУС</p>
+                <h4 className="text-xl font-bold">AI-бот помощник</h4>
+              </div>
+            </div>
+
+            <p className="text-white/70 mb-6">
+              При покупке марафона вы получаете доступ к умному Telegram-боту:
+            </p>
+
+            <div className="grid sm:grid-cols-2 gap-3">
+              {botFeatures.map((feature, index) => (
+                <div key={index} className="flex items-center gap-3">
+                  <feature.icon className="w-5 h-5 text-coral flex-shrink-0" />
+                  <span className="text-white/90 text-sm">{feature.text}</span>
+                </div>
+              ))}
+            </div>
+          </motion.div>
 
           {/* Divider */}
           <div className="border-t border-gray-100 my-10" />
