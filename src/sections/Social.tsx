@@ -39,8 +39,8 @@ export default function Social() {
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle
-          title="Давайте дружить"
-          subtitle="Следите за полезным контентом в социальных сетях"
+          title="Мои соцсети"
+          subtitle="Полезный контент, закулисье и вдохновение"
         />
 
         <motion.div

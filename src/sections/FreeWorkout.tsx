@@ -16,9 +16,9 @@ export default function FreeWorkout() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <Card hover={false} className="overflow-hidden">
+          <Card hover={false} className="overflow-hidden rounded-3xl">
             {/* Header */}
-            <div className="bg-gradient-to-r from-coral to-peach p-6 text-center">
+            <div className="bg-gradient-to-r from-coral to-peach p-6 text-center rounded-t-3xl">
               <div className="flex items-center justify-center gap-2 text-white mb-2">
                 <Gift className="w-6 h-6" />
                 <span className="font-bold text-lg">БЕСПЛАТНАЯ ТРЕНИРОВКА</span>

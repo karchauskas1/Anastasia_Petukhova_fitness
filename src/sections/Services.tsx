@@ -123,7 +123,7 @@ function ServiceCard({ service }: { service: ServiceData }) {
   const [showPrices, setShowPrices] = useState(false);
 
   return (
-    <Card className="h-full flex flex-col p-6 md:p-8">
+    <Card className="flex flex-col p-6 md:p-8">
       {/* Badge */}
       <div className="flex items-center gap-2 mb-4">
         <service.icon className="w-5 h-5 text-coral" />
@@ -144,7 +144,7 @@ function ServiceCard({ service }: { service: ServiceData }) {
       {service.benefits && (
         <div className="flex flex-wrap gap-2 mb-3">
           {service.benefits.map((benefit, idx) => (
-            <span key={idx} className="text-xs bg-mint/10 text-mint px-2 py-1 rounded-full">
+            <span key={idx} className="text-xs bg-coral/10 text-coral font-medium px-3 py-1 rounded-full border border-coral/20">
               {benefit}
             </span>
           ))}
@@ -244,14 +244,13 @@ export default function Services() {
           <h3 className="text-2xl font-bold text-dark text-center mb-8">
             Персональные тренировки
           </h3>
-          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto items-start">
             <motion.div
               variants={{
                 hidden: { opacity: 0, y: 30 },
                 visible: { opacity: 1, y: 0 },
               }}
               transition={{ duration: 0.5, ease: "easeOut" }}
-              className="h-full"
             >
               <ServiceCard service={personalOffline} />
             </motion.div>
@@ -261,7 +260,6 @@ export default function Services() {
                 visible: { opacity: 1, y: 0 },
               }}
               transition={{ duration: 0.5, ease: "easeOut" }}
-              className="h-full"
             >
               <ServiceCard service={personalOnline} />
             </motion.div>
@@ -290,14 +288,13 @@ export default function Services() {
               Тренируйтесь вместе с подругой, партнёром или мамой — это выгоднее и веселее!
             </p>
           </div>
-          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto items-start">
             <motion.div
               variants={{
                 hidden: { opacity: 0, y: 30 },
                 visible: { opacity: 1, y: 0 },
               }}
               transition={{ duration: 0.5, ease: "easeOut" }}
-              className="h-full"
             >
               <ServiceCard service={splitOffline} />
             </motion.div>
@@ -307,7 +304,6 @@ export default function Services() {
                 visible: { opacity: 1, y: 0 },
               }}
               transition={{ duration: 0.5, ease: "easeOut" }}
-              className="h-full"
             >
               <ServiceCard service={splitOnline} />
             </motion.div>

@@ -95,17 +95,6 @@ export default function Cancellation() {
                 </motion.div>
               ))}
             </div>
-
-            {/* Footer */}
-            <motion.p
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.6 }}
-              className="text-center text-gray-text mt-8 text-lg"
-            >
-              Мяу 🐈‍⬛
-            </motion.p>
           </Card>
         </motion.div>
       </div>
