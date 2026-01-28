@@ -2,7 +2,10 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { ChevronLeft, ChevronRight, Star, Quote } from "lucide-react";
 import Card from "../components/Card";
+import Button from "../components/Button";
 import SectionTitle from "../components/SectionTitle";
+
+const TELEGRAM_LINK = "https://t.me/petukhovaas";
 
 interface Testimonial {
   id: number;
@@ -222,6 +225,21 @@ export default function Reviews() {
               <ChevronRight className="w-5 h-5" />
             </button>
           </div>
+
+          {/* CTA Button */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-center mt-10"
+          >
+            <a href={TELEGRAM_LINK} target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="px-12">
+                Записаться на тренировку
+              </Button>
+            </a>
+          </motion.div>
         </div>
       </div>
     </section>
