@@ -5,13 +5,11 @@ import Card from "../components/Card";
 import Button from "../components/Button";
 import SectionTitle from "../components/SectionTitle";
 
-const TELEGRAM_LINK = "https://t.me/petukhovaas";
 const STUDIO_LINK = "https://ghettoprincess.art";
 
 interface ScheduleItem {
   time: string;
   name: string;
-  level?: string;
 }
 
 interface DaySchedule {
@@ -22,40 +20,27 @@ interface DaySchedule {
 
 const schedule: DaySchedule[] = [
   {
-    day: "Понедельник",
-    shortDay: "ПН",
-    classes: [
-      { time: "10:00", name: "Функциональный", level: "Все уровни" },
-      { time: "19:00", name: "TRX", level: "Все уровни" },
-    ],
-  },
-  {
     day: "Вторник",
     shortDay: "ВТ",
-    classes: [{ time: "19:00", name: "Силовая", level: "Все уровни" }],
-  },
-  {
-    day: "Среда",
-    shortDay: "СР",
-    classes: [{ time: "10:00", name: "TRX", level: "Все уровни" }],
+    classes: [{ time: "15:00", name: "Функционал" }],
   },
   {
     day: "Четверг",
     shortDay: "ЧТ",
-    classes: [{ time: "19:00", name: "Функциональный", level: "Все уровни" }],
+    classes: [{ time: "12:00", name: "Функционал" }],
   },
   {
     day: "Пятница",
     shortDay: "ПТ",
-    classes: [
-      { time: "10:00", name: "Силовая", level: "Все уровни" },
-      { time: "19:00", name: "Mix", level: "Все уровни" },
-    ],
+    classes: [{ time: "13:00", name: "Функционал" }],
   },
   {
     day: "Суббота",
     shortDay: "СБ",
-    classes: [{ time: "11:00", name: "Растяжка", level: "Все уровни" }],
+    classes: [
+      { time: "11:00", name: "Для беременных" },
+      { time: "12:00", name: "Функционал" },
+    ],
   },
 ];
 
@@ -67,8 +52,8 @@ export default function Schedule() {
     <section id="schedule" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle
-          title="Расписание групповых тренировок"
-          subtitle="Студия Ghetto Princess, Санкт-Петербург"
+          title="Групповые тренировки"
+          subtitle="Функциональный тренинг / Умный фитнес"
         />
 
         {/* Schedule Grid */}
@@ -84,7 +69,7 @@ export default function Schedule() {
               },
             },
           }}
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-12"
+          className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12 max-w-3xl mx-auto"
         >
           {schedule.map((day, index) => (
             <motion.div
@@ -106,31 +91,20 @@ export default function Schedule() {
 
                 {/* Classes */}
                 <div className="space-y-3">
-                  {day.classes.length > 0 ? (
-                    day.classes.map((cls, idx) => (
-                      <div
-                        key={idx}
-                        className="bg-light-bg rounded-xl p-3 text-center"
-                      >
-                        <div className="flex items-center justify-center gap-1 text-coral font-semibold text-sm mb-1">
-                          <Clock className="w-3 h-3" />
-                          {cls.time}
-                        </div>
-                        <p className="text-dark font-medium text-sm">
-                          {cls.name}
-                        </p>
-                        {cls.level && (
-                          <p className="text-gray-text text-xs mt-1">
-                            {cls.level}
-                          </p>
-                        )}
+                  {day.classes.map((cls, idx) => (
+                    <div
+                      key={idx}
+                      className="bg-light-bg rounded-xl p-3 text-center"
+                    >
+                      <div className="flex items-center justify-center gap-1 text-coral font-semibold text-sm mb-1">
+                        <Clock className="w-3 h-3" />
+                        {cls.time}
                       </div>
-                    ))
-                  ) : (
-                    <p className="text-gray-text text-center text-sm py-4">
-                      Выходной
-                    </p>
-                  )}
+                      <p className="text-dark font-medium text-sm">
+                        {cls.name}
+                      </p>
+                    </div>
+                  ))}
                 </div>
               </Card>
             </motion.div>
@@ -154,13 +128,17 @@ export default function Schedule() {
             </div>
             <p className="text-dark font-medium mb-2">Ghetto Princess</p>
             <p className="text-gray-text mb-6">
-              Санкт-Петербург, ул. Примерная, д. 1
+              Санкт-Петербург, Петроградский район
               <br />
-              <span className="text-sm">(адрес будет добавлен позже)</span>
+              <span className="font-medium text-dark">ул. Газовая, 10И</span>
+            </p>
+
+            <p className="text-sm text-gray-text mb-6">
+              Запись и абонементы через сайт студии
             </p>
 
             <a href={STUDIO_LINK} target="_blank" rel="noopener noreferrer">
-              <Button variant="outline">Записаться на групповую</Button>
+              <Button variant="outline">Перейти на сайт студии</Button>
             </a>
           </Card>
         </motion.div>

@@ -5,10 +5,12 @@ import Hero from "./sections/Hero";
 import Facts from "./sections/Facts";
 import Directions from "./sections/Directions";
 import Services from "./sections/Services";
+import Cancellation from "./sections/Cancellation";
 import Marathon from "./sections/Marathon";
 import Schedule from "./sections/Schedule";
 import Reviews from "./sections/Reviews";
 import Social from "./sections/Social";
+import FreeWorkout from "./sections/FreeWorkout";
 
 function App() {
   return (
@@ -19,8 +21,10 @@ function App() {
         <Facts />
         <Directions />
         <Services />
+        <Cancellation />
         <Marathon />
         <Schedule />
+        <FreeWorkout />
         <Reviews />
         <Social />
       </main>
