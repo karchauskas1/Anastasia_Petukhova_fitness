@@ -3,6 +3,7 @@ import Footer from "./components/Footer";
 import FloatingButton from "./components/FloatingButton";
 import Hero from "./sections/Hero";
 import Facts from "./sections/Facts";
+import Certificates from "./sections/Certificates";
 import Directions from "./sections/Directions";
 import Services from "./sections/Services";
 import Cancellation from "./sections/Cancellation";
@@ -19,6 +20,7 @@ function App() {
       <main>
         <Hero />
         <Facts />
+        <Certificates />
         <Directions />
         <Services />
         <Cancellation />

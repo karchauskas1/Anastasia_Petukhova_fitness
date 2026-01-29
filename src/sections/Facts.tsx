@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
-import { Calendar, Users, GraduationCap, Dumbbell } from "lucide-react";
+import { Calendar, Users, Dumbbell } from "lucide-react";
 import Card from "../components/Card";
 
 const facts = [
@@ -15,12 +15,6 @@ const facts = [
     number: 300,
     suffix: "+",
     label: "довольных клиенток",
-  },
-  {
-    icon: GraduationCap,
-    number: 14,
-    suffix: "",
-    label: "профессиональных сертификатов",
   },
   {
     icon: Dumbbell,
@@ -89,7 +83,7 @@ export default function Facts() {
               },
             },
           }}
-          className="grid grid-cols-2 lg:grid-cols-4 gap-6"
+          className="grid grid-cols-1 sm:grid-cols-3 gap-6"
         >
           {facts.map((fact, index) => (
             <motion.div
