@@ -33,7 +33,7 @@ export default function Header() {
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        isScrolled
+        isScrolled || isMobileMenuOpen
           ? "bg-white/95 backdrop-blur-md shadow-sm py-3"
           : "bg-transparent py-5"
       )}
@@ -77,7 +77,7 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <nav className="md:hidden mt-4 pb-4 border-t border-gray-100 pt-4">
+          <nav className="md:hidden mt-4 pb-4 border-t border-gray-100 pt-4 bg-white rounded-b-xl">
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
                 <a

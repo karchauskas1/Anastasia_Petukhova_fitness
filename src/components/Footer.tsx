@@ -33,11 +33,11 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:contact@example.com"
+                  href="mailto:Nas.Petukhova2001@yandex.ru"
                   className="flex items-center gap-3 text-white/60 hover:text-white transition-colors"
                 >
                   <Mail className="w-4 h-4 text-coral" />
-                  contact@example.com
+                  Nas.Petukhova2001@yandex.ru
                 </a>
               </li>
             </ul>
